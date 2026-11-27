@@ -10,4 +10,4 @@ GitHub Pages deploys from `main` at the repository root. Keep `.nojekyll` and re
 
 ## Update the trailer
 
-Update the MP4 and matching poster together. The trailer plays with its original audio after a click; the page does not autoplay or preload it. The separate cover is an illustration, not gameplay; the import panel is an actual game screenshot.
+Update the MP4 and matching poster together. The trailer starts muted on page load, except for reduced-motion or data-saving visitors. The original audio is available through the player controls. The separate cover is an illustration, not gameplay; the import panel is an actual game screenshot.

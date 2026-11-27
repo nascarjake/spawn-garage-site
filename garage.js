@@ -42,13 +42,23 @@
  toggle.setAttribute('aria-controls','tour');
  toggle.setAttribute('aria-expanded','false');
  toggle.addEventListener('keydown',e=>{if(e.key===' '){e.preventDefault();toggle.click()}});
- toggle.addEventListener('click',e=>{
-   e.preventDefault();
-   const show=film.hidden;
+ function showFilm(show){
    film.hidden=!show;cover.hidden=show;
    toggle.textContent=show?'Back to cover':'Watch the trailer';
    toggle.setAttribute('aria-expanded',String(show));
    label.textContent=show?'Gameplay trailer · Spawn Garage':'Cover illustration';
-   if(show)film.play().catch(()=>{});else film.pause();
+   if(!show)film.pause();
+ }
+ toggle.addEventListener('click',e=>{
+   e.preventDefault();
+   const show=film.hidden;
+   showFilm(show);
+   if(show)film.play().catch(()=>{});
  });
+ // Start muted only; the browser controls let visitors pause or turn on sound.
+ if(!matchMedia('(prefers-reduced-motion: reduce)').matches && !navigator.connection?.saveData){
+   film.muted=true;
+   showFilm(true);
+   film.play().catch(()=>{}); // Controls remain available if the browser blocks autoplay.
+ }
 })();
