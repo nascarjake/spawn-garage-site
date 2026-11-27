@@ -1,18 +1,13 @@
-# Spawn Garage landing page
+# Spawn Garage: Pit Access
 
-A public-facing static landing page for the free community project on Spawn. The site contains only the landing page and its assets, not the Garage importer, model files, account data, or server configuration.
+Official public landing page for the free Spawn community project. It contains only the site and media, not the importer, car models, or account data.
 
-## Preview
-Open `index.html`, or serve this directory: `python3 -m http.server 8000`. A local web server or HTTPS allows the Copy URL button to use the clipboard.
+- Public link: https://garage.goosegames.dev/
+- GitHub Pages origin: https://nascarjake.github.io/spawn-garage-site/
+- Local preview: `python3 -m http.server 8000` in this directory.
 
-## Publish on GitHub Pages
-Create a public GitHub repository for this site alone, push these files to its default branch, and choose **Settings → Pages → Deploy from a branch → main → /(root)**. Keep `.nojekyll` at the root and leave asset URLs relative so the page works under a repository path. The expected URL for the `nascarjake/spawn-garage-site` repository is `https://nascarjake.github.io/spawn-garage-site/`; the working URL appears in GitHub's Pages settings after a successful build.
+GitHub Pages deploys from `main` at the repository root. Keep `.nojekyll` and relative asset URLs.
 
-## Replace the hero with Savi’s footage
-Replace `assets/garage-hero.mp4` with a short, muted H.264 MP4 (roughly 8–12 seconds, 16:9, preferably under 3 MB). Put the car or action on the center-right for the headline, keep UI/private info out of frame, and avoid fast flashes. Replace `assets/garage-poster.webp` with a matching frame. No source code change is required. Motion defaults off when reduced motion or data saving is requested. A viewer can still choose to play it.
+## Update the gameplay clip
 
-## Asset notes
-- Hero: excerpt from the creator’s existing Spawn Garage footage; no audio.
-- Import panel: cropped actual in-game screenshot, with unrelated status area omitted.
-- ModsLocker: cropped public file card for the supported Porsche example, used for identification in the how-to. The car archive itself is not included.
-- Assetto World: a clearly labeled link-finding diagram rather than an unverified screenshot.
+Replace `assets/garage-hero.mp4` and `assets/garage-poster.webp` together. Aim for 12–16 seconds in 16:9: show an imported car driving in the first two seconds, then the import panel and successful bay assignment, then the car parked or rolling out. Keep private HUD details out. The video plays on demand. The separate cover is an illustration, not gameplay; the import panel is an actual game screenshot.
