@@ -8,6 +8,6 @@ Official public landing page for the free Spawn community project. It contains o
 
 GitHub Pages deploys from `main` at the repository root. Keep `.nojekyll` and relative asset URLs.
 
-## Update the gameplay clip
+## Update the trailer
 
-Replace `assets/garage-hero.mp4` and `assets/garage-poster.webp` together. Aim for 12–16 seconds in 16:9: show an imported car driving in the first two seconds, then the import panel and successful bay assignment, then the car parked or rolling out. Keep private HUD details out. The video plays on demand. The separate cover is an illustration, not gameplay; the import panel is an actual game screenshot.
+Update the MP4 and matching poster together. The trailer plays with its original audio after a click; the page does not autoplay or preload it. The separate cover is an illustration, not gameplay; the import panel is an actual game screenshot.

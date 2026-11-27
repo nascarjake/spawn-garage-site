@@ -46,9 +46,9 @@
    e.preventDefault();
    const show=film.hidden;
    film.hidden=!show;cover.hidden=show;
-   toggle.textContent=show?'Back to cover':'Play in-game footage';
+   toggle.textContent=show?'Back to cover':'Watch the trailer';
    toggle.setAttribute('aria-expanded',String(show));
-   label.textContent=show?'Actual footage · Spawn Garage':'Cover illustration';
+   label.textContent=show?'Gameplay trailer · Spawn Garage':'Cover illustration';
    if(show)film.play().catch(()=>{});else film.pause();
  });
 })();
