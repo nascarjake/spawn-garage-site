@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101114">
+<meta name="description" content="A free, community-made garage on Spawn. Bring supported Assetto Corsa car mods into a browser game with friends.">
+<title>Spawn Garage | A community garage on Spawn</title>
+<link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<script src="garage.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top wrap">
+  <a href="#" class="brand" aria-label="Spawn Garage home"><img src="assets/mark.svg" alt="" width="36" height="36"><span>SPAWN <b>GARAGE</b><small>GOOSE GAMES / COMMUNITY PROJECT</small></span></a>
+  <nav aria-label="Main"><a href="#process">How it works</a><a href="#guide">Import guide</a><a href="#sources">Find cars</a></nav>
+  <a class="btn btn-small" href="https://www.spawn.co/@theflying314/spawn-garage">Open in Spawn <span aria-hidden="true">↗</span></a>
+</header>
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-media"><video id="garage-loop" muted loop playsinline preload="none" poster="assets/garage-poster.webp" aria-hidden="true" data-src="assets/garage-hero.mp4"></video><div class="hero-shade"></div></div>
+    <div class="wrap hero-inner">
+      <p class="tag"><span></span> FREE COMMUNITY PROJECT ON SPAWN</p>
+      <h1 id="hero-title">Bring your own<br><em>ride.</em></h1>
+      <p class="intro">Turn a supported Assetto Corsa car mod into a car you can park and drive with friends, right in Spawn.</p>
+      <div class="buttons"><a class="btn" href="https://www.spawn.co/@theflying314/spawn-garage">Open Spawn Garage <span aria-hidden="true">↗</span></a><a class="btn secondary" href="#guide">Get an import link <span aria-hidden="true">↓</span></a></div>
+    </div>
+    <div class="hero-bar wrap"><span>01 / THE GARAGE <span class="dim">· ACTUAL IN-GAME FOOTAGE</span></span><button type="button" id="motion" hidden aria-controls="garage-loop">Pause motion</button></div>
+  </section>
+  <section class="wrap section" id="process">
+    <div class="section-head"><p class="eyebrow">01 / THE PIPELINE</p><h2>From mod page<br>to parking bay.</h2><p>Spawn Garage rebuilds compatible car mods for the browser. You don’t need to download or unzip a file yourself.</p></div>
+    <ol class="steps" aria-label="Import pipeline diagram">
+      <li><span class="step-no">01 / SOURCE</span><div class="step-icon" aria-hidden="true">↗</div><h3>Find a car</h3><p>Grab the ModsLocker file-page URL for a car ZIP or 7z.</p></li>
+      <li><span class="step-no">02 / CONVERSION</span><div class="step-icon" aria-hidden="true">▦</div><h3>Import in Spawn</h3><p>Paste the link. The importer extracts the car, optimizes the model, and packages compatible textures and driving data.</p></li>
+      <li><span class="step-no">03 / PARKED</span><div class="step-icon" aria-hidden="true">✓</div><h3>Drive it</h3><p>Follow the progress in-game. When it finishes, find the car in its bay and take it for a spin.</p></li>
+    </ol>
+  </section>
+  <section class="guide-layer" id="guide">
+    <div class="wrap section">
+      <div class="section-head"><p class="eyebrow">02 / IMPORT GUIDE</p><h2>Copy the page.<br>Not the download.</h2><p>The current importer accepts ModsLocker file pages for ZIP and 7z car archives. A catalog listing, generic download page, or a temporary file link won’t work.</p></div>
+      <div class="guide-grid">
+        <article class="guide-step"><p class="eyebrow">A / FIND THE MIRROR</p><h3>Find a ModsLocker link</h3><p>On Assetto World, open an individual car, go to its download options, and choose the <strong>ModsLocker</strong> mirror if offered. If a listing has no supported mirror, pick another car with a supported mirror.</p>
+          <figure class="diagram"><figcaption>DIAGRAM / CATALOG → MIRROR</figcaption><div><span>Car listing</span><b aria-hidden="true">↓</b><span>Download options</span><b aria-hidden="true">↓</b><strong>ModsLocker file page</strong></div></figure>
+        </article>
+        <article class="guide-step"><p class="eyebrow">B / COPY THE ADDRESS</p><h3>Use the file page URL</h3><p>Once the ModsLocker page shows that car’s named archive, copy the address from your browser. The page URL is all you need. Don’t copy the temporary download address or include tracking parameters.</p>
+          <figure class="browser"><figcaption><span aria-hidden="true">● ● ●</span><strong>ModsLocker · example file page</strong></figcaption><a class="address" href="https://modslocker.com/asw/asw-porsche-911-gt2-rs-nords-trackday-spec-7z">modslocker.com/asw/asw-porsche-911-gt2-rs-nords-trackday-spec-7z</a><img class="visual" src="assets/mirror-porsche.jpg" width="879" height="278" loading="lazy" alt="The ModsLocker file page displays a Porsche 911 GT2 RS archive with a Download File button. Copy the page address instead."><div class="copy-row"><button class="btn secondary btn-small" data-copy="https://modslocker.com/asw/asw-porsche-911-gt2-rs-nords-trackday-spec-7z" type="button">Copy example URL</button><span role="status" id="copy-status"></span></div></figure>
+        </article>
+        <article class="guide-step"><p class="eyebrow">C / PUT IT IN THE GARAGE</p><h3>Paste, choose Medium, import</h3><p>Open Spawn Garage and its Assetto Corsa import panel. Paste the link, choose <strong>Medium</strong> to start, and hit <strong>Import</strong>. Sign in to Spawn first if prompted. Watch for the completion message and bay assignment.</p><div id="import-visual"><figure class="app-preview"><figcaption>IN-GAME SCREENSHOT / THE IMPORT PANEL</figcaption><img class="visual" src="assets/import-panel.webp" width="1060" height="534" loading="lazy" alt="Spawn Garage’s car import panel, with a ModsLocker URL entered, Medium selected, and a pink Import button."></figure></div><p class="note">Valid downloads can still be rejected. Try Low for a geometry-budget error. For a protected model or archive, use an unlocked release from its author. Some files will not work even on Low.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="wrap section" id="sources">
+    <div class="section-head"><p class="eyebrow">03 / SOURCE DIRECTORY</p><h2>Find your next car.</h2><p>Start with the tested link format. The other sites are for discovery, not a promise their download buttons will work in the importer.</p></div>
+    <div class="sources">
+      <a href="https://modslocker.com/asw/asw-porsche-911-gt2-rs-nords-trackday-spec-7z"><span class="source-tag">IMPORT EXAMPLE</span><h3>ModsLocker <b aria-hidden="true">↗</b></h3><p>Open a Porsche 911 GT2 RS example file page. Copy its page URL, not the temporary file URL.</p></a>
+      <a href="https://www.assettoworld.com/"><span class="source-tag">DISCOVERY</span><h3>Assetto World <b aria-hidden="true">↗</b></h3><p>Browse for a car, then use its ModsLocker mirror when one is available.</p></a>
+      <a href="https://www.overtake.gg/downloads/categories/ac-cars.6/"><span class="source-tag">DISCOVERY</span><h3>OverTake <b aria-hidden="true">↗</b></h3><p>Read author descriptions and release terms. Don’t paste OverTake listing URLs into the importer.</p></a>
+    </div>
+    <p class="note">Use only files you have permission to import and share. Free to download does not necessarily mean free to redistribute. Keep the creator’s credit and source link.</p>
+  </section>
+  <section class="wrap section final">
+    <p class="eyebrow">BUILT BY @THEFLYING314 / GOOSE GAMES</p><h2>See you in the garage.</h2><p>Free to play on Spawn. Imports depend on the community converter and the source file being available.</p><a class="btn" href="https://www.spawn.co/@theflying314/spawn-garage">Open in Spawn <span aria-hidden="true">↗</span></a>
+  </section>
+</main>
+<footer class="wrap footer"><span>SPAWN GARAGE / UNOFFICIAL COMMUNITY PROJECT</span><p>Not affiliated with Kunos Simulazioni, car manufacturers, or third-party mod sites.</p><a href="#">Back to top ↑</a></footer>
+</body>
+</html>
